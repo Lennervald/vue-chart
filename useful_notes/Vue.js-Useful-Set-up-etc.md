@@ -1,4 +1,5 @@
 ### Here we can add all useful VueJS knowledge:
+
 ### Installation: 
 
 ```
@@ -43,12 +44,7 @@ Then, in the main.js file you can just require a less file like this:
 require('./less/main.less')
 
 ## Sublime 
+
 Install Package Sass - for Syntax Highlight
 
 SASS Guide: http://sass-lang.com/guide (by a glance is very simimlar to Less)
-
-// 
-
- 
-
-
