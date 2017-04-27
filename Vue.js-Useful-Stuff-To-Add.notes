@@ -6,7 +6,7 @@
 
 npm install vue
 npm install --global vue-cli
-vue init webpack my-project
+vue init webpack my-project (or just webpack-simple for small projects )
 
 cd my-project
 npm install
@@ -22,9 +22,9 @@ App.vue - like app.component.ts in Angular. The main component were we will put 
 // Add LESS support
 
 You need to install a few packages, run
-npm install style-loader css-loader less-loader less --save-dev
+npm install style-loader less-loader less --save-dev
 
-Then add:
+Then add this to webpack.config.js as it's own rule in the rules-array:
 
 {
   test: /\.less$/,
@@ -36,6 +36,9 @@ Then add:
       loader: "less-loader" // compiles Less to CSS
   }]
 }
+
+Then, in the main.js file you can just require a less file like this:
+require('./less/main.less')
 
  
 
