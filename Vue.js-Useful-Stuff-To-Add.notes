@@ -6,7 +6,7 @@
 
 npm install vue
 npm install --global vue-cli
-vue init webpack my-project (or just webpack-simple for small projects )
+vue init webpack my-project (or just webpack-simple for quick prototyping )
 
 cd my-project
 npm install
