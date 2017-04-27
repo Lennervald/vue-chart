@@ -1,11 +1,13 @@
 <template>
   <div id="app">
+
     <div class="container">
       <br>
       <b-alert show>
         {{title}}
       </b-alert>
     </div>
+
   </div>
 </template>
 
