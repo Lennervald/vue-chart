@@ -19,6 +19,24 @@ Sublime: Install Package Vue Syntax Highlight
 main.js - like app.module in Angular. The core component were you import and rended "#app" to index.html.
 App.vue - like app.component.ts in Angular. The main component were we will put the basic template structure. 
 
+// Add LESS support
+
+You need to install a few packages, run
+npm install style-loader css-loader less-loader less --save-dev
+
+Then add:
+
+{
+  test: /\.less$/,
+  use: [{
+      loader: "style-loader" // creates style nodes from JS strings
+  }, {
+      loader: "css-loader" // translates CSS into CommonJS
+  }, {
+      loader: "less-loader" // compiles Less to CSS
+  }]
+}
+
  
 
 
