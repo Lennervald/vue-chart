@@ -1,7 +1,10 @@
 <template>
   <div id="app">
   <h1>{{title}}</h1>
-  <img class="logo" src="./assets/images/oddhill-logo.jpg">
+  <div class="temp-header">
+    <h1>{{title}}</h1>
+    <img class="logo" src="./assets/images/oddhill-logo.jpg">
+  </div>
 
 <!--     <img src="./assets/logo.png">
     <h1></h1>

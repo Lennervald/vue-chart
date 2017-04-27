@@ -24,14 +24,20 @@ a {
   color: #42b983;
 }
 
-.logo {
-  width: 200px;
-  opacity: 0.1;
-  -webkit-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
-}
+.temp-header {
 
-.logo:hover {
-  width: 210px;
-  opacity: 0.9;
+  h1 { color: red }
+  
+  .logo {
+    width: 200px;
+    opacity: 0.1;
+    -webkit-transition: all ease-in-out 300ms;
+    transition: all ease-in-out 300ms;
+  }
+
+  .logo:hover {
+    width: 210px;
+    opacity: 0.9;
+  }
+  
 }
