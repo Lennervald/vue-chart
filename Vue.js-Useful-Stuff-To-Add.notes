@@ -13,6 +13,7 @@ npm install
 npm run dev
 
 Sublime: Install Package Vue Syntax Highlight
+host: localhost:8080 by default
 
 // Structure:
 
@@ -39,6 +40,10 @@ Then add this to webpack.config.js as it's own rule in the rules-array:
 
 Then, in the main.js file you can just require a less file like this:
 require('./less/main.less')
+
+Sublime: Install Package Sass - for Syntax Highlight
+
+
 
  
 

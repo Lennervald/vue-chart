@@ -1,7 +1,7 @@
 <template>
   <div id="app">
   <h1>{{title}}</h1>
-  <img src="./assets/images/oddhill-logo.jpg">
+  <img class="logo" src="./assets/images/oddhill-logo.jpg">
 
 <!--     <img src="./assets/logo.png">
     <h1></h1>
