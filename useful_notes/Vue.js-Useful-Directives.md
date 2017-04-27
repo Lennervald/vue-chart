@@ -1,5 +1,6 @@
 ### MOST USEFUL FROM THE VUE.JS API (Most Useful Methods etc.)
 
+
 ### DIRECTVES
 
 ### v-on
@@ -7,10 +8,16 @@
  Attaches an event listener to the element. The event type is denoted by the argument. The expression can either be a method name or an inline statement, or simply omitted when there are modifiers present.
 
  IMPORTANT: Argument: event (required)
+Example:
+<button v-on:click="doThat('hello', $event)"></button>
+-- If you need to pass more than one argument write it: 
+(arg1, $event)
 
  Modifiers:
  .stop - call event.stopPropagation().
  .prevent - call event.preventDefault().
+<span v-on:mousemove.stop="">STOP IT RIGHT HERE</span>
+
  .capture - add event listener in capture mode.
  .self - only trigger handler if event was dispatched from this element.
  .{keyCode | keyAlias} - only trigger handler on certain keys.
@@ -20,6 +27,18 @@
  .right - (2.2.0+) only trigger handler for right button mouse events.
  .middle - (2.2.0+) only trigger handler for middle button mouse events.
  .passive - (2.3.0+) attaches a DOM event with { passive: true }.
+
+### KEY MODIFIERS
+https://vuejs.org/v2/guide/events.html#Key-Modifiers
+.enter
+.tab
+.delete (captures both “Delete” and “Backspace” keys)
+.esc
+.space
+.up
+.down
+.left
+.right
  
 <!-- method handler -->
  <button v-on:click="doThis"></button>
@@ -50,7 +69,16 @@ Listening to custom events on a child component (the handler is called when “m
  <!-- native event on component -->
  <my-component @click.native="onClick"></my-component>
 
+Own Examples:
+<p v-on:mousemove="updateCo">Coordinates: {{ x }} / {{ y }}</p>
 
+x: 0,
+y: 0
+
+updateCo: function(event){
+      this.x = event.clientX;
+      this.y = event.clientY;
+    }
 
 
 ### v-bind
