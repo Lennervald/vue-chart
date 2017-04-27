@@ -7,6 +7,8 @@
         {{title}}
       </b-alert>
     </div>
+    
+      <img src="./assets/images/logo.png">
 
   </div>
 </template>
@@ -23,5 +25,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import 'main.scss';
+  @import './sass/main.scss';
 </style>
