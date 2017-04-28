@@ -1,44 +1,17 @@
 <template>
   <div id="app">
-
-    <div class="container-fluid">
-      <br>
-      <b-alert show>
-        {{title}}
-      </b-alert>
-      <img src="./assets/images/logo.png">
-    </div>
-    <div>
-      <p>{{runFunc()}}</p>
-      <p>{{subtitle}}</p>
-      <p class="nice-numbs"></p>
-    </div>
+    <main-view></main-view>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
-    return {
-      title: 'Odd Hill Pre-LIA Project',
-      subtitle: ''
+    data () {
+      return {
+        title: "App.vue: is just the container for all vues"
+      }
     }
-  },
-  methods: {
-    runFunc(){
-      let niceArray = ['One', 'Two', 'Three'];
-      this.subtitle = 'This part below is generated with jQuery';
-      $(() => {
-        niceArray.forEach(function(val){
-          $('.nice-numbs').append('<li>' + val + '</li>');
-          $('li').css({'list-style':'none', 'color': '#41B883'});
-        });
-      })
-    }
-
   }
-}
 </script>
 
 <style lang="scss" scoped>
