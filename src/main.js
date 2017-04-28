@@ -1,6 +1,4 @@
 import Vue from 'vue';
-import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
 
 // The vues
 import App from './App.vue';
@@ -8,11 +6,14 @@ import Main from './components/Main.vue';
 import Header from './components/navigation/Header.vue';
 import { routes } from './routes';
 
-// Add booostrap-vue
+// Add booostrap-vue-functionality
 import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+// Add router-functionality
+import VueRouter from 'vue-router';
+import VueResource from 'vue-resource';
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
@@ -23,7 +24,7 @@ const router = new VueRouter({
 Vue.component('main-view', Main);
 Vue.component('nav-header', Header);
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue);  
 
 new Vue({
   el: '#app',
