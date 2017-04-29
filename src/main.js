@@ -15,6 +15,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 // Add router-functionality
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
 
