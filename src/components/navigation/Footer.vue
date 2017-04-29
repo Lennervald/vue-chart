@@ -1,11 +1,11 @@
 <template>
-    <div>
+<!--     <div>
         <footer class="footer">
               <div class="container">
                 <p>Color-palette</p><img src="../../assets/images/color-palette.png" alt="star" height="45">
               </div>
         </footer>
-    </div>
+    </div> -->
 </template>
 
 <script>

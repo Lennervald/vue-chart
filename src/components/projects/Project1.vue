@@ -30,6 +30,7 @@
 	export default {
 	  data () {
 	    return {
+	      
 	      name: 'Project1',
 	      lead: 'Created in Vue.js 2'
 	    }

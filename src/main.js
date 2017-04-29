@@ -3,7 +3,6 @@ import Vue from 'vue';
 // The vues
 import App from './App.vue';
 import Header from './components/navigation/Header.vue';
-import Middle from './components/navigation/Middle.vue';
 import Footer from './components/navigation/Footer.vue';
 import { routes } from './routes';
 
@@ -24,7 +23,6 @@ const router = new VueRouter({
 });
 
 Vue.component('nav-header', Header);
-Vue.component('nav-middle', Middle);
 Vue.component('nav-footer', Footer);
 
 Vue.use(BootstrapVue);  

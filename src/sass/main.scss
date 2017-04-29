@@ -64,8 +64,8 @@ h3 {
 }
 
 p {
-    margin-top: 0;
-    margin-bottom: 1rem;
+    // margin-top: 0;
+    // margin-bottom: 1rem;
 }
 
 a {
@@ -100,3 +100,18 @@ a {
     background: rgba(255, 255, 255, 0.15);
 }
 
+
+.list-group-item {
+    margin: 0 0 20px;
+    background: $yellow;
+    p {
+            margin: 0;
+    }
+}
+
+.progress {
+    background-color: #ccc;
+    .progress-bar {
+        background-color: $yellow;
+    }
+}

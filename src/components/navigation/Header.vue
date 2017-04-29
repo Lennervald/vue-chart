@@ -8,9 +8,7 @@
             <b-collapse is-nav id="nav_collapse">
                 <b-nav is-nav-bar>
                     <b-nav-item href="/#/proj1">Project 1</b-nav-item>
-                    <!-- <b-nav-item href="/#/proj2">Project 2</b-nav-item>
-                    <b-nav-item href="/project/1">Main project</b-nav-item> -->
-                    <b-nav-item href="/#/form">Form</b-nav-item>
+                    <b-nav-item href="/#/form">Add a new Project</b-nav-item>
                 </b-nav>
             </b-collapse>
         </b-navbar>
