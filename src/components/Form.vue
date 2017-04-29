@@ -10,7 +10,13 @@
             <small class="text-muted">This will save your name and email to a server</small>
 
             <p>Your input: <br>{{user.name}}<br>{{user.email}}</p>
-            <b-button href="" @click="submit">send</b-button>
+            <b-button href="" @click="submit">Send Data</b-button>
+            <b-button class="btn btn-success" @click="fetchData">Get Data!</b-button>
+            <br>
+            <br>
+            <ul class="list-group">
+              <li class="list-group-item" v-for="u in users">{{u.name}} - {{u.email}}</li>
+            </ul>
         </div>
       </div>
       
@@ -26,7 +32,8 @@
         user: {
           name: '',
           email: ''
-        }
+        },
+        users: []
       }
     },
     methods: {
@@ -40,10 +47,25 @@
           console.log(response);
         }, error => {
           console.log(error);
-        })
+        });
+      },
+      fetchData(){
+        this.$http.get('https://ng-http-25f0f.firebaseio.com/oddhill-test.json')
+          .then(response => {
+            return response.json()
+          }).
+          then(data => {
+            // console.log(data)
+            // const user = data; 
+            // won't work since it returns objects and we want an array:
+            const resultArray = [];
+            for(let key in data){
+              resultArray.push(data[key]);
+            }
+            this.users = resultArray;
+            
+          });
       }
-
-
     }
   }
 </script>
