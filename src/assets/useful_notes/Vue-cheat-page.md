@@ -108,17 +108,3 @@ export default {
 	  }
 	}
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-

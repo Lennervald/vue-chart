@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <main-view></main-view>
+    <nav-header></nav-header>
+    <nav-middle></nav-middle>
+    <nav-footer></nav-footer>
   </div>
 </template>
 
@@ -15,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import './sass/main.scss';
+  @import 'sass/main.scss';
 </style>

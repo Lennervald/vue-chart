@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar toggleable type="inverse" variant="success">
+        <b-navbar toggleable type="inverse">
             <b-nav-toggle target="nav_collapse"></b-nav-toggle>
             <b-link class="navbar-brand" to="#">
                 <span>{{title}}</span>
@@ -27,3 +27,7 @@
       }
     }
 </script>
+
+<style lang="scss" scoped>
+  @import '../../sass/main.scss';
+</style>
