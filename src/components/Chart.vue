@@ -28,7 +28,14 @@ import LineChart from '../LineChart.js'
             {
               label: 'Data One',
               backgroundColor: '#f87979',
-              data: [this.getRandomInt(), this.getRandomInt()]
+              data: [this.getRandomInt(), this.getRandomInt()],
+              legend: {
+                          display: true,
+                          labels: {
+                              fontColor: 'rgb(255, 99, 132)'
+                          }
+                      }
+
             }, {
               label: 'Data One',
               backgroundColor: '#f87979',

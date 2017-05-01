@@ -6,44 +6,44 @@
 */
 
 
-html {
-  position: relative;
-  min-height: 100%;
-}
+// html {
+//   position: relative;
+//   min-height: 100%;
+// }
 
-body {
-  /* Margin bottom by footer height 
-     or slightly more for more space before footer
-  */
-  margin-bottom: 120px;
-}
+// body {
+//   /* Margin bottom by footer height 
+//      or slightly more for more space before footer
+//   */
+//   margin-bottom: 120px;
+// }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  // background: #F0CA4D;
-  height: 50px;
+// footer {
+//   position: absolute;
+//   bottom: 0;
+//   width: 100%;
+//   // background: #F0CA4D;
+//   height: 50px;
 
-  p, img{
-    display: inline-block
-  }
+//   p, img{
+//     display: inline-block
+//   }
 
-  img {
-    height: 24px;
-    padding-left: 12px;
-  }
-}
+//   img {
+//     height: 24px;
+//     padding-left: 12px;
+//   }
+// }
 
-/*
-  Other footer height for Boostrap xs, sm
-  (for breakpoint see: http://getbootstrap.com/css/)
-*/
-@media screen and (max-width: 969px) {
-    body {
-      margin-bottom:50px;
-    }
-    footer {
-      height: 50px;
-    }
-}
+// /*
+//   Other footer height for Boostrap xs, sm
+//   (for breakpoint see: http://getbootstrap.com/css/)
+// */
+// @media screen and (max-width: 969px) {
+//     body {
+//       margin-bottom:50px;
+//     }
+//     footer {
+//       height: 50px;
+//     }
+// }
