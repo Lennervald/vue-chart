@@ -9,6 +9,7 @@
                 <b-nav is-nav-bar>
                     <b-nav-item href="/#/proj1">Project 1</b-nav-item>
                     <b-nav-item href="/#/form">Add a new Project</b-nav-item>
+                    <b-nav-item href="/#/chart">A chart in action</b-nav-item>
                 </b-nav>
             </b-collapse>
         </b-navbar>
