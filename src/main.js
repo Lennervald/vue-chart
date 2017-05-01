@@ -4,6 +4,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import Header from './components/navigation/Header.vue';
 import Footer from './components/navigation/Footer.vue';
+import Chart2 from './components/Chart2.vue';
 import { routes } from './routes';
 
 // Add booostrap-vue-functionality
@@ -24,6 +25,7 @@ const router = new VueRouter({
 
 Vue.component('nav-header', Header);
 Vue.component('nav-footer', Footer);
+Vue.component('doughnut-chart-js', Chart2);
 
 Vue.use(BootstrapVue);  
 

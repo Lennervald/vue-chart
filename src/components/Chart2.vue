@@ -1,19 +1,8 @@
 <template>
-  <div class="small">
-      <doughnut-chart
-        :chart-data="datacollection"
-        :options="{
-          cutoutPercentage: 30, 
-          animation: {
-              animateScale:true,
-              animateRotate: false
-          }
-          }"
-        :width="400"
-        :height="200"
-        >
+  <div>
+      <doughnut-chart :chart-data="datacollection" :options="opts" 
+      :labels="{}">{{fillData()}}
     </doughnut-chart>
-    <button @click="fillData()">Randomize</button>
   </div>
 </template>
 
@@ -27,29 +16,43 @@ export default {
     data() {
         return {
             datacollection: null,
+            opts: null
         }
     },
-    mounted() {
+    created() {
         this.fillData()
     },
     methods: {
         fillData() {
+            this.opts = {
+                cutoutPercentage: 30, 
+                animation: { animateScale:true, animateRotate: false},
+                legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: {
+                                boxWidth: 14,
+                                padding: 20,
+                                fontSize: 16,
+                                fontColor: "#000"
+                            }
+                        }
+            }
             this.datacollection = {
-                labels: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt()],
+                labels: ['Client Hours', 'Internal Hours', 'Other'],
                 datasets: [{
                     data: [this.getRandomInt(), this.getRandomInt(), this.getRandomInt()],
-                    backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
-                    hoverBackgroundColor: ["#FFF", "#CCC", "#000"]
+                    backgroundColor: ["#DE5B49", "#F0CA4D", "#324D5C"],
+                    hoverBackgroundColor: "#CCC",
+                    borderWidth: 0,
+                    borderColor: "#E7E7D0",
+                    hoverBorderColor: "#E7E7D0",
+                    defaultFontSize: 40,
+                    boxWidth: 10
+
                 }],
-                options: {
-                  cutoutPercentage: 90,
-                  animation: {
-                      animateScale:true
-                  }
-                }
             }
-            
-            },
+        },
         getRandomInt() {
             return Math.floor(Math.random() * (50 - 5 + 1)) + 5
         }
