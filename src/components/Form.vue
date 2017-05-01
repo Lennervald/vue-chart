@@ -5,6 +5,7 @@
 
       <div class="col-xs-12 col-md-2"></div>
         <div class="col-xs-12 col-md-4">
+        <slot></slot>
         <br><br><br>
         <h3>Add a new Project</h3>
           <b-form-input v-model="project.id" type="text" placeholder="Enter id" :state="project.id.length?'success':'warning'" :formatter="format" @blur="counterUp"></b-form-input>
