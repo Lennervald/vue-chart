@@ -1,11 +1,6 @@
 @import 'globalvariables';
 @import 'globalmixins';
 
-@import './scss-files/footer';
-@import './scss-files/form';
-@import './scss-files/header';
-@import './scss-files/project';
-
 /* A Basic Color Palette - Flat Design
 -----------------------------
 Blue #324D5C Green #46B29D Yellow #F0CA4D Orange #E37B40 Red #DE5B49
@@ -18,48 +13,47 @@ Blue #324D5C Green #46B29D Yellow #F0CA4D Orange #E37B40 Red #DE5B49
 
 #app {
     text-align: center;
-    // background: #E7E7D0; 
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+// ul {
+//     list-style-type: none;
+//     padding: 0;
+// }
 
-li {
-    display: inline-block;
-    margin: 0 10px;
-}
+// li {
+//     display: inline-block;
+//     margin: 0 10px;
+// }
 
-h1 {
-    font-size: 4.5rem;
-    font-weight: 300;
-    line-height: 1.1;
-    font: $font-1;
-}
+// h1 {
+//     font-size: 4.5rem;
+//     font-weight: 300;
+//     line-height: 1.1;
+//     font: $font-1;
+// }
 
 
-h2 {
-	@extend h1;
-    font-size: 3.6rem;
-    color: $red;
-}
+// h2 {
+// 	@extend h1;
+//     font-size: 3.6rem;
+//     color: $red;
+// }
 
-h3 {
-	@extend h1;
-    font-size: 1.85rem;
-}
+// h3 {
+// 	@extend h1;
+//     font-size: 1.85rem;
+// }
 
-h4 {
-    @extend h1;
-    font-size: 1.0rem;
-}
+// h4 {
+//     @extend h1;
+//     font-size: 1.0rem;
+// }
 
-a {
-    color: $orange;
-}
+// a {
+//     color: $orange;
+// }
 
-.alert {
-    background: #41B883;
-    color: #35495E;
-}
+// .alert {
+//     background: #41B883;
+//     color: #35495E;
+// }

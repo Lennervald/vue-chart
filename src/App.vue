@@ -19,7 +19,7 @@ export default {
     components: {
       appProject: Project
     }
-  }
+}
 </script>
 
 <style lang="scss" scoped>
