@@ -4,7 +4,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import Header from './components/navigation/Header.vue';
 import Footer from './components/navigation/Footer.vue';
-import Chart2 from './components/Chart2.vue';
+import Chart2 from './components/charts/Chart2.vue';
 import { routes } from './routes';
 
 // Add booostrap-vue-functionality
