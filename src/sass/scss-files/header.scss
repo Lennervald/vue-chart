@@ -1,0 +1,14 @@
+@import '../globalvariables';
+@import '../globalmixins';
+
+
+/* Header
+-----------------------------
+*/
+
+
+.navbar{
+    background: #000;
+
+    .links { margin: 0 auto; }
+}

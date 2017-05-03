@@ -1,0 +1,12 @@
+/* Mixins
+-----------------------------
+*/
+
+@mixin transition($ms) {
+  -webkit-transition: all ease-in-out $ms;
+     -moz-transition: all ease-in-out $ms;
+      -ms-transition: all ease-in-out $ms;
+          transition: all ease-in-out $ms;
+}
+
+// use it by adding @include transition(200ms); to any selector
