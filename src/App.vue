@@ -21,7 +21,12 @@ export default {
   },
   data: function() {
     return {
-      selectedComponent: 'app-one'
+      selectedComponent: 'app-one',
+      // when sliding to a new component, 
+      // set the background-color of #app to the same as new component
+      // app-one:#722FBC 
+      // app-two: #F9418C
+      // app-three: #36295E
     }
   },
   methods: {
@@ -29,12 +34,16 @@ export default {
       switch(this.selectedComponent) {
         case 'app-one':
           this.selectedComponent = 'app-two';
+          app.style.backgroundColor = '#F9418C';
           break;
         case 'app-two':
           this.selectedComponent = 'app-three';
+          app.style.backgroundColor = '#36295E';
           break;
         default:
           this.selectedComponent = 'app-one';
+          app.style.backgroundColor = '#722FBC';
+          
       }
     }
   }
