@@ -13,8 +13,18 @@ import 'bootstrap-vue/dist/bootstrap-vue.css';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
 
+// Import our components
+// import One from './components/One.vue';
+// import Two from './components/Two.vue';
+// import Three from './components/Three.vue';
+
 Vue.use(VueRouter);
 Vue.use(VueResource);
+
+// Register our components globaly
+// Vue.component('app-one', One);
+// Vue.component('app-two', Two);
+// Vue.component('app-three', Three);
 
 const router = new VueRouter({
 	routes
