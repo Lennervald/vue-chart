@@ -1,9 +1,8 @@
 <template>
   <div id="app">
       <!-- <router-view></router-view> -->
-      <button class="btn btn-primary slider-menu"
-        @click="next">Toggle Components</button>
-      <transition name="fade">
+      <button class="btn btn-primary slider-menu" @click="next">Toggle Components</button>
+      <transition name="slide">
         <component :is="selectedComponent"></component>
       </transition>
   </div>
@@ -45,17 +44,34 @@ export default {
 <style lang="scss" scoped>
   @import 'sass/main.scss';
 
-  .fade-enter {
-    opacity: 0;
-  }
-  .fade-enter-active {
-    transition: opacity .5s;
-  }
-  .fade-leave {
+  .slide-enter {
 
   }
-  .fade-leave-active {
-    transition: opacity .5s;
-    opacity: 0;
+  .slide-enter-active {
+    animation: slide-in 1.5s ease-out forwards;
+  }
+  .slide-leave {
+
+  }
+  .slide-leave-active {
+    animation: slide-out 1.5s ease-out forwards;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100vw);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100vw);
+    }
   }
 </style>
