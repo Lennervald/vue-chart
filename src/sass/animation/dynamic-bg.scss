@@ -1,0 +1,93 @@
+@import '../globalvariables';
+@import '../globalmixins';
+
+/* Animations 
+------------------------ */
+
+/* Coherent times & ease */
+$time-1: 0.3s;
+$ease-1: ease-in-out;
+
+.custom-transition-time {
+	transition: 
+		width $time-1 $ease-1, 
+		height $time-1 $ease-1, 
+		background-color $time-1 $ease-1, 
+		transform $time-1 $ease-1, 
+		left $time-1 $ease-1;
+}
+
+
+
+.color-div-1 {
+    @extend .custom-transition-time;
+	position: absolute;
+	top: -80vh;
+	left: 10%;
+	width: 45%;
+	height: 2400px;
+    background: $red;
+    transform: rotate(40deg);
+}
+
+.color-div-1-off {
+	@extend .color-div-1;
+	left: -150%;
+}
+
+.color-div-2 {
+    @extend .custom-transition-time;
+	position: absolute;
+	top: -80vh;
+    left: 65%;
+	width: 60%;
+	height: 2400px;
+    background: $pink;
+    transform: rotate(40deg);
+}
+
+.color-div-2-off {
+	@extend .color-div-2;
+	left: -150%;
+}
+
+
+// For the smaller devices iPhone 5 etc.
+@media screen and (max-width: 500px) {
+	
+	.color-div-1 {
+		top: -120vh;
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
+// .color-div-1:hover, .color-div-1-moving {
+// 	-webkit-transform: rotate(180deg);
+// 	transform: rotate(180deg);
+// }
+
+
+// .box {
+//     border-style: solid;
+//     border-width: 1px;
+//     display: block;
+//     width: 100px;
+//     height: 100px;
+//     background-color: #0000FF;
+//     -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out, background-color 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+//     transition: width 2s, height 2s, background-color 2s, transform 2s;
+// }
+
+// .box:hover {
+//     background-color: #FFCCCC;
+//     width: 200px;
+//     height: 200px;
+//     -webkit-transform: rotate(180deg);
+//     transform: rotate(180deg);
+// }

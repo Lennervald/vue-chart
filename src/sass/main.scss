@@ -1,28 +1,154 @@
 @import 'globalvariables';
 @import 'globalmixins';
 
-@import './scss-files/header';
+@import './animation/dynamic-bg';
+@import './navigation/header';
 
-
-/* A Basic Color Palette - Flat Design
------------------------------
-Blue #324D5C Green #46B29D Yellow #F0CA4D Orange #E37B40 Red #DE5B49
-
-*/
-
-/* General (Body)
+/* Global Variables
 -----------------------------
 */
 
-#app {
-    text-align: center;
-    // background: #E7E7D0; 
+$font-1: Avenir, sans-serif;
+$font-2: Helvetica, sans-serif;
+
+$blue: #324D5C;
+$green: #46B29D;
+$yellow: #F0CA4D;
+$orange: #E37B40;
+$red: #DE5B49;
+
+
+// /* Global Variables NYA ODDHILL
+// -----------------------------
+// */
+
+$font-headlines: 'Bergen', sans-serif;
+// $font-mono: 'Roboto Mono', monospace;
+$font-serif: 'Domine', serif;
+
+$dark_purple: #36295E;
+$light_purple: #722FBC;
+
+$dark_blue: #1A2EB6;
+$light_blue: #4E22F8;
+
+$red: #F7114E;
+$orange: #F73647;
+$pink: #F9418C;
+$green: #2EFEC5;
+
+
+// GENERAL: Don't change these values.
+
+.app, html, body {
+   // This one has the Main Background Color (Static non-moving)
+   background: $dark_purple;
+   position: fixed;
+   width: 100%;
+   height: 100vh;
+   margin: 0;
+   padding: 0;
+   z-index: 1;
 }
+
+.app-moving-backgrounds-body {
+    // No Background Colors on this "NOT-bootstraped" app-movingbackground-body
+    // use color-div's in /animation/moving-backgrounds
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.app-wrapper-body {
+    // No Background Colors on this warpper
+    // border: 10px solid $pink;
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    z-index: 3;
+}
+
+
+
+/*
+---------------------------------
+*/
+
+// Fonts
+
+.headlines {
+   font-family: $font-headlines;
+   text-transform: lowercase;
+   font-weight: 700;
+   color: #fff;
+   font-size: 5em;
+}
+
+.breadtext {
+   font-family: 'Century Schoolbook';
+   color: #fff;
+   font-size: 1.05em;
+   color: #fff;
+}
+
+h1 {
+ @extend .headlines;
+}
+
+p {
+  @extend .breadtext;
+}
+
+.app-btn {
+  cursor: pointer;
+  background-color: #f7114e;
+  color: #fff;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #fff;
+  padding: 0.7rem 1.1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+// For the smaller devices iPhone 5 etc.
+@media screen and (max-width: 500px) {
+  
+  .headlines {
+     font-size: 4em;
+  }
+
+  .breadtext {
+     font-size: 1em;
+  }
+
+}
+
+
+/* Under här: Fixa in de i respektiva scss fil.
+---------------------------------
+*/
+
 .views {
   padding: 10px;
   width: 100vw;
   height: 100vh;
-  background-color: #722FBC;
+  // background-color: #722FBC;
   color: white;
 }
 

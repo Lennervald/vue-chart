@@ -3,7 +3,7 @@
 ## Edit file node_modules/css-loader/lib/loader.js
 Go to line 20 and replace to this:
 ´´´
-if´map && typeof map !== "string") {
+if(map && typeof map !== "string") {
     map = JSON.stringify(map);
 }
 ´´´

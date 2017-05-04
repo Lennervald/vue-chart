@@ -16,6 +16,6 @@
 
 <style scoped>
   .views {
-    background-color: #F9418C;
+    /*background-color: #F9418C;*/
   }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div class="views">
-    <p>{{name}}</p>
+    <h1>Detail 1</h1>
+    <img style="max-width: 60%" src="../../assets/images/test/1.png">
   </div>
 </template>
 
@@ -8,14 +9,11 @@
   export default {
     data: function() {
       return {
-        name: 'component three'
       }
     }
   }
 </script>
 
 <style scoped>
-  .views {
-    /*background-color: #36295E;*/
-  }
+
 </style>
