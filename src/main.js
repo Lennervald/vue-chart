@@ -9,6 +9,9 @@ import BootstrapVue from 'bootstrap-vue';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+// Import main styles (scss)
+import './sass/main.scss';
+
 // Add router-functionality
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
