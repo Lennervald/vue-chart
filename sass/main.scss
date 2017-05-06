@@ -1,59 +1,29 @@
 @import 'globalvariables';
 @import 'globalmixins';
 
+@import './animation/slide';
 @import './animation/dynamic-bg';
 @import './navigation/header';
-
-/* Global Variables
------------------------------
-*/
-
-$font-1: Avenir, sans-serif;
-$font-2: Helvetica, sans-serif;
-
-$blue: #324D5C;
-$green: #46B29D;
-$yellow: #F0CA4D;
-$orange: #E37B40;
-$red: #DE5B49;
-
-
-// /* Global Variables NYA ODDHILL
-// -----------------------------
-// */
-
-$font-headlines: 'Bergen', sans-serif;
-// $font-mono: 'Roboto Mono', monospace;
-$font-serif: 'Domine', serif;
-
-$dark_purple: #36295E;
-$light_purple: #722FBC;
-
-$dark_blue: #1A2EB6;
-$light_blue: #4E22F8;
-
-$red: #F7114E;
-$orange: #F73647;
-$pink: #F9418C;
-$green: #2EFEC5;
 
 
 // GENERAL: Don't change these values.
 
 .app, html, body {
    // This one has the Main Background Color (Static non-moving)
-   background: $dark_purple;
    position: fixed;
-   width: 100%;
+   width: 100vw;
    height: 100vh;
    margin: 0;
    padding: 0;
-   z-index: 1;
+   font-family: 'Proxima Nova', sans-serif;
+   font-size: 100%;
+   color: #fff;
+   background: $dark_purple;
 }
 
-.app-moving-backgrounds-body {
-    // No Background Colors on this "NOT-bootstraped" app-movingbackground-body
-    // use color-div's in /animation/moving-backgrounds
+.app-dynamic-bg-body {
+    /* Use no Background Color on this "NOT-bootstraped", 
+    instead use the file /animation/dynamic-bg.scss */
     position: absolute;
     top: 0;
     right: 0;
@@ -66,8 +36,8 @@ $green: #2EFEC5;
     // No Background Colors on this warpper
     // border: 10px solid $pink;
     position: fixed;
-    width: 100%;
-    height: 10%;
+    width: 100vw;
+    height: 100vh;
     text-align: center;
     z-index: 3;
 }
@@ -80,27 +50,27 @@ $green: #2EFEC5;
 
 // Fonts
 
-.headlines {
-   font-family: $font-headlines;
-   text-transform: lowercase;
-   font-weight: 700;
-   color: #fff;
-   font-size: 5em;
+.oddhill-headlines {
+   font-family: 'Gotham', sans-serif;
 }
 
-.breadtext {
-   font-family: 'Century Schoolbook';
-   color: #fff;
-   font-size: 1.05em;
-   color: #fff;
+.oddhill-text {
+   font-family: 'Proxima Nova', sans-serif;
+}
+
+.oddhill-numbers {
+   font-family: 'Century Schoolbook', serif;
 }
 
 h1 {
- @extend .headlines;
+  @extend .oddhill-headlines;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 p {
-  @extend .breadtext;
+  @extend .oddhill-text;
+  font-size: 0.875rem
 }
 
 .app-btn {
@@ -124,19 +94,6 @@ p {
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-}
-
-// For the smaller devices iPhone 5 etc.
-@media screen and (max-width: 500px) {
-  
-  .headlines {
-     font-size: 4em;
-  }
-
-  .breadtext {
-     font-size: 1em;
-  }
-
 }
 
 

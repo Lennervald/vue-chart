@@ -12,7 +12,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 // Import main styles (scss)
-import './sass/main.scss';
+import '../sass/main.scss';
 
 Vue.use(VueResource);
 Vue.use(BootstrapVue);  

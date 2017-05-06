@@ -1,0 +1,61 @@
+@import '../globalvariables';
+@import '../globalmixins';
+
+/* Animations 
+------------------------ */
+
+/* Coherent times & ease */
+
+$time-1: 0.4s;
+$ease-1: ease-in-out;
+
+.custom-transition-time {
+	transition: 
+		width $time-1 $ease-1, 
+		height $time-1 $ease-1, 
+		background-color $time-1 $ease-1, 
+		transform $time-1 $ease-1, 
+		left $time-1 $ease-1;
+}
+
+.color-div-1 {
+    @extend .custom-transition-time;
+	position: absolute;
+	width: 40vh;
+	height: 200vh;
+	top: -80vh;
+	left: 10vw;
+    transform: scale(2,2);
+    transform: rotate(40deg);
+
+    .inside-color1 {
+		float: left;
+	    background: $red;
+		width: 50%;
+		height: 100%;
+	}
+
+	.inside-color2 {
+		float: right;
+	    background: $pink;
+		width: 50%;
+		height: 100%;
+	}
+}
+
+.color-div-1-off {
+	@extend .color-div-1;
+	left: -100vw;
+}
+
+
+
+// // For the smaller devices iPhone 5 etc.
+// @media screen and (max-width: 500px) {
+	
+// 	.color-div-1 {
+// 		top: -120vh;
+// 		width: 100%;
+// 	}
+
+// }
