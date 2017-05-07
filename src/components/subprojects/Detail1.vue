@@ -1,7 +1,7 @@
 <template>
   <div class="views">
     <h1>Detail 1</h1>
-    <img style="max-width: 60%" src="../../assets/images/test/1.png">
+    <img style="max-width: 100%" src="../../assets/images/test/1.png">
   </div>
 </template>
 

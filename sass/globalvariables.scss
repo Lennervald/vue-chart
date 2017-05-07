@@ -15,14 +15,50 @@ $orange: #F73647;
 $pink: #F9418C;
 $green: #2EFEC5;
 
-/* fonts */
+// Fonts
 
-$default-font: 'Domine', serif;
-
-.headlines {
-   font-family: 'Bergen', sans-serif;
-   text-transform: lowercase;
-   font-weight: 700;
-   color: #fff;
+.oddhill-headlines {
+   font-family: 'Gotham', sans-serif;
 }
 
+.oddhill-text {
+   font-family: 'Proxima Nova', sans-serif;
+}
+
+.oddhill-numbers {
+   font-family: 'Century Schoolbook', serif;
+}
+
+h1 {
+  @extend .oddhill-headlines;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+p {
+  @extend .oddhill-text;
+  font-size: 0.875rem
+}
+
+.app-btn {
+  cursor: pointer;
+  background-color: #f7114e;
+  color: #fff;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid #fff;
+  padding: 0.7rem 1.1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}

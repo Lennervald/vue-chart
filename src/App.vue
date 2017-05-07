@@ -2,6 +2,7 @@
   <div class="app">
     <app-dynamic-bg></app-dynamic-bg>
     <app-wrapper></app-wrapper>
+    <!-- <app-menu></app-menu> -->
   </div>
 </template>
 

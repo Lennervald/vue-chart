@@ -1,12 +1,20 @@
 <template>
   <div class="views">
-    <p>{{name}}</p>
-        <a @click="subpage1">detail 1</a>
-        <a @click="subpage2">detail 2</a>
-        <a @click="subpage3">detail 3</a>
-        <transition name="subpages">
-          <component :is="selectedSubpage"></component>
-        </transition>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+        <h1>{{name}}</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>{{name}}</p>
+              <a @click="subpage1">detail 1</a>
+              <a @click="subpage2">detail 2</a>
+              <a @click="subpage3">detail 3</a>
+              <transition name="subpages">
+                <component :is="selectedSubpage"></component>
+              </transition>
+        </div>
+      </div>
+    </div> 
   </div>
 </template>
 
@@ -40,9 +48,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-  .views {
-    /*background-color: #F9418C;*/
-  }
-</style>

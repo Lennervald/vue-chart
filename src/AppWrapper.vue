@@ -1,20 +1,18 @@
 <template>
   <div>
-    <div class="container-fluid app-wrapper-body">
-    <div class="row">
-      <div class="col-12">
-        <div class="head-spacer-1"></div>
-        <!-- HERE GOES THE HEAD SPACE  -->
-      </div>
-    </div>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-12">
-
-          <!-- HERE GOES ALL THE MAIN CONTENT aka THE SAME AS HOW WE USED THE APP.VUE  -->
-          <button class="btn btn-primary slider-menu" @click="next">Toggle Components</button>
-          <transition name="slide">
-            <component :is="selectedComponent"></component>
-          </transition>
+        <div class="col-8 wrapper-outer-content">
+          <div class="wrapper-inner-content">
+            <transition name="slide">
+              <component :is="selectedComponent"></component>
+            </transition>
+          </div>
+        </div>
+        <div class="col-4 menu-outer-content">
+          <div class="menu-inner-content">
+            <button class="btn btn-primary slider-menu" @click="next">Toggle Components</button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,18 +1,15 @@
 @import 'globalvariables';
 @import 'globalmixins';
 
+// @import './navigation/menu';
 @import './animation/slide';
 @import './animation/dynamic-bg';
-@import './navigation/header';
 
 
 // GENERAL: Don't change these values.
 
 .app, html, body {
    // This one has the Main Background Color (Static non-moving)
-   position: fixed;
-   width: 100vw;
-   height: 100vh;
    margin: 0;
    padding: 0;
    font-family: 'Proxima Nova', sans-serif;
@@ -21,79 +18,34 @@
    background: $dark_purple;
 }
 
-.app-dynamic-bg-body {
+.dynamic-bg-content {
     /* Use no Background Color on this "NOT-bootstraped", 
     instead use the file /animation/dynamic-bg.scss */
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
-    width: 100vw;
+    left: 0;
+    width: 75vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.wrapper-outer-content {
     height: 100vh;
     z-index: 2;
+
+      .wrapper-inner-content {
+        overflow: hidden;
+        height: 100vh;
+    }
 }
 
-.app-wrapper-body {
-    // No Background Colors on this warpper
-    // border: 10px solid $pink;
-    position: fixed;
-    width: 100vw;
+.menu-outer-content {
     height: 100vh;
-    text-align: center;
-    z-index: 3;
-}
+    background: #fff; 
+    z-index: 2;
+    .menu-inner-content {
 
-
-
-/*
----------------------------------
-*/
-
-// Fonts
-
-.oddhill-headlines {
-   font-family: 'Gotham', sans-serif;
-}
-
-.oddhill-text {
-   font-family: 'Proxima Nova', sans-serif;
-}
-
-.oddhill-numbers {
-   font-family: 'Century Schoolbook', serif;
-}
-
-h1 {
-  @extend .oddhill-headlines;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-
-p {
-  @extend .oddhill-text;
-  font-size: 0.875rem
-}
-
-.app-btn {
-  cursor: pointer;
-  background-color: #f7114e;
-  color: #fff;
-  display: inline-block;
-  font-weight: normal;
-  line-height: 1.25;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 2px solid #fff;
-  padding: 0.7rem 1.1rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+    }
 }
 
 
@@ -102,15 +54,6 @@ p {
 */
 
 .views {
-  padding: 10px;
-  width: 100vw;
-  height: 100vh;
-  // background-color: #722FBC;
-  color: white;
-}
-
-.slider-menu {
-  position: absolute;
-  top: 30px;
-  right: 20px;
+  height: 100vh !important;
+  background-color: none;
 }

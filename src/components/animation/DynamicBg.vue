@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="app-dynamic-bg-body"> 
+    <div class="dynamic-bg-content"> 
       <!-- HERE GOES ONLY ALL MOVING COLOR DIVS  -->
       <div :class="div1">
         <div class="inside-color1"></div>
